@@ -11,8 +11,15 @@ com a IA. Cole só os pedidos que você enviou.
 ## Parte 1: antes de programar
 
 - O que cada classe guarda:
+Astronauta: guarda cpf, nome e idade
+Voo: guarda codigo
+Agencia: guarda tanto Astronauta e suas variaveis quanto os Voos
+
 - O que acontece em `LANCAR_VOO`, em palavras:
+se o comando for igual "lançar voo" recebe um valor e associa a "codigo", pega a variavel "codigo" e associa a agencia.
+
 - Uma dúvida que eu tinha antes de começar:
+porque todos os cout tem "<< comando " se a parte "TODO", ja recebe todo valor o caminho e até o comando tipo quando o comando é lançar voo e o TODO = agencia.lancarVoo(codigo);
 
 ## Parte 1: uso de IA para entender algo
 

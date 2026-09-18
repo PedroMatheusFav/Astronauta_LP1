@@ -5,11 +5,32 @@
 using namespace std;
 
 // Parte 1: escreva aqui as classes Astronauta, Voo e Agencia.
+class Astronauta {
+    string cpf;
+    string nome;
+    int idade;
+};
+
+class Voo {
+    int codigo;
+    vector<Astronauta> astronautas;
+    bool lancado;
+    bool finalizado;
+    bool explodido;
+};
+
+class Agencia {
+    vector<Astronauta> astronautas;
+    vector<Voo> voos;
+};
+    
+
 // Depois, em cada comando, apague a linha do cout com "TODO" e descomente
 // a chamada ao metodo da Agencia.
 
 int main() {
     // TODO: criar a Agencia aqui, por exemplo:  Agencia agencia;
+    Agencia agencia;
     string comando;
 
     while (cin >> comando) {   // le uma palavra; para no FIM ou quando a entrada acaba
