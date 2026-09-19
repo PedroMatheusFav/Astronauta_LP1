@@ -50,6 +50,10 @@ class Agencia {
         Agencia(){
         }
 
+        string getElemento(){
+            return cpf;
+        }
+
         void cadastrarAstronauta(string c, string n, int i){
             astronautas.push_back(Astronauta(c, n, i));
             cout << "OK: astronauta " << c << " cadastrado" << endl;
@@ -57,10 +61,10 @@ class Agencia {
 
         void adicionarAstronauta(string cpf, int codigo){
             for(int i = 0; i < astronautas.size(); i++){
-                if(astronautas[i] == cpf){
+                if(astronautas[i].getElemento() == cpf){
+                    voos.push_back(Voo(codigo));
                     cout << "OK: astronauta " << cpf << " adicionado ao voo " << codigo << endl;
                     return;
-                    break;
                 } else if (i == astronautas.size() - 1){
                 cout << "ERRO: astronauta " << cpf << " nao encontrado" << endl;
                 return;
