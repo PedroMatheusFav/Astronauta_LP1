@@ -1,0 +1,18 @@
+OK: astronauta 111 cadastrado
+OK: astronauta 222 cadastrado
+OK: astronauta 333 cadastrado
+OK: astronauta 444 cadastrado
+OK: astronauta 555 cadastrado
+OK: astronauta 666 cadastrado
+OK: voo 10 cadastrado
+Voo 10: 0/5 passageiros - disponivel
+OK: astronauta 111 adicionado ao voo 10
+OK: astronauta 222 adicionado ao voo 10
+OK: astronauta 333 adicionado ao voo 10
+Voo 10: 3/5 passageiros - disponivel
+OK: astronauta 444 adicionado ao voo 10
+OK: astronauta 555 adicionado ao voo 10
+Voo 10: 5/5 passageiros - lotado
+ERRO: voo 10 lotado
+Voo 10: 5/5 passageiros - lotado
+ERRO: voo 99 nao cadastrado
