@@ -52,7 +52,7 @@ public:
     // GETTERS
     int getCodigo() const { return codigo; }
     string getEstado() const { return estado; }
-    vector<string> getPassageiros() const { return cpfsPassageiros; }
+    const vector<string>& getPassageiros() const { return cpfsPassageiros; }
 
     // AÇÕES DO VOO
     void adicionarPassageiro(string cpf) {
@@ -102,8 +102,8 @@ class Agencia {
     Agencia() {}
 
     // GETTERS
-    vector<Astronauta> getAstronautas() const { return astronautas; }
-    vector<Voo> getVoos() const { return voos; }
+    const vector<Astronauta>& getAstronautas() const { return astronautas; }
+    const vector<Voo>& getVoos() const { return voos; }
 
     // AÇÕES DA AGENCIA
     void cadastrarAstronauta(string cpf, string nome, int idade){
@@ -182,6 +182,18 @@ class Agencia {
             return; 
         }
 
+        bool estaNoVoo = false;
+        for (int k = 0; k < voos[idxVoo].getPassageiros().size(); k++) {
+            if (voos[idxVoo].getPassageiros()[k] == cpf) {
+                estaNoVoo = true;
+                break;
+            }
+        }
+        if (estaNoVoo == false) {
+            cout << "ERRO: astronauta " << cpf << " nao esta no voo " << codigo << endl;
+            return;
+        }
+
         voos[idxVoo].removerPassageiro(cpf);
         cout << "OK: astronauta " << cpf << " removido do voo " << codigo << endl;
     }
@@ -199,7 +211,7 @@ class Agencia {
             return;
         }
         if (voos[idxVoo].getPassageiros().empty()) {
-            cout << "ERRO: voo " << codigo << " nao possui passageiros" << endl;
+            cout << "ERRO: voo " << codigo << " nao possui astronautas" << endl;
             return;
         }
 
@@ -209,7 +221,7 @@ class Agencia {
 
             if (idxAstro != -1) {
                 if (astronautas[idxAstro].estaVivo() == false) {
-                    cout << "ERRO: voo " << codigo << " possui astronauta morto" << endl;
+                    cout << "ERRO: astronauta " << cpfPassageiro << " esta morto" << endl;
                     return;
                 }
                 if (astronautas[idxAstro].estaDisponivel() == false) {
@@ -332,7 +344,7 @@ class Agencia {
             if (astronautas[i].estaVivo() == false) {
                 temMortos = true;
 
-                cout << astronautas[i].getCpf() << " " << astronautas[i].getNome() << " voos:";
+                cout << astronautas[i].getCpf() << " " << astronautas[i].getNome() << " - voos:";
 
                 for (int j = 0; j < voos.size(); j++) {
                     

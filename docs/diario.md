@@ -5,8 +5,8 @@ com a IA. Cole só os pedidos que você enviou.
 
 ## Ambiente
 
-- Versão do OpenCode (`opencode --version`):
-- Modelo usado:
+- Versão do OpenCode (`opencode --version`): 1.18.32
+- Modelo usado: Big Pickle
 
 ## Parte 1: antes de programar
 
@@ -23,13 +23,18 @@ porque todos os cout tem "<< comando " se a parte "TODO", ja recebe todo valor o
 
 ## Parte 1: uso de IA para entender algo
 
-- O que perguntei (ou "não usei"):
-- O que aprendi:
+- O que perguntei (ou "não usei"): usei pra quebrar os 3 slides em partes menores e mais interativas para entender como aplicar o codigo.
 
-## Primeiro contato: revisão sem editar
+- O que aprendi: aprendi que todas as classes devem ter private e public, alem disso tem que ter os GETERS pra ter acesso as variaveis do private, o CONSTRUTOR que vai definir as variaveis da nossa classe e oque vai ter de valores dentro dela (algumas classes nao tem esses construtores), e por fim as AÇOES que vão fazer os trabalhos pesados, seria os nossos f(x) e g(x), onde entra um valor e sai outro valor (y) seguindo um algoritmo/equação especifica.
+
+## Primeiro contato: revisão sem editar ----------------------------------------------------------------------------------
 
 - As três melhorias que a IA sugeriu, em uma linha cada:
-- A que escolhi e por quê:
+  1. Getters que copiam o vetor inteiro
+  2. Validação repetida "voo nao esta planejado"
+  3. Estado do voo como enum em vez de string
+
+- A que escolhi e por quê: escolhi a primeira porque é uma melhoria facil de fazer e vai deixar mais otimizado o programa.
 - O que mudou no código, e se os seis testes continuaram passando:
 - O que entendi que não sabia antes:
 
